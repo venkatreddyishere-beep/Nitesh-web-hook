@@ -1,29 +1,162 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#050505"><title>NITESHH'S WEB HOOK</title><style>
-*{box-sizing:border-box}body{margin:0;background:#030303;color:#eee;font:14px system-ui,Arial;min-height:100vh;overflow-x:hidden}
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050505">
+<title>NITESHH'S WEB HOOK — Two Tab Experiment</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#030303;color:#eee;font:14px system-ui,Arial;min-height:100vh}
 body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 50% 0,#65000035,transparent 45%);animation:p 4s infinite alternate;pointer-events:none}
-main{position:relative;max-width:620px;margin:auto;padding:20px}.head{display:flex;align-items:center;gap:12px}.orb{width:13px;height:13px;border-radius:50%;background:#e22;box-shadow:0 0 18px #e22;animation:b 1s infinite}.head h1{font-size:21px;margin:0;letter-spacing:1px}.sub{font-size:9px;color:#d44;letter-spacing:2px;margin-top:3px}
+main{position:relative;max-width:650px;margin:auto;padding:20px}.head{display:flex;align-items:center;gap:12px}
+.orb{width:13px;height:13px;border-radius:50%;background:#e22;box-shadow:0 0 18px #e22;animation:b 1s infinite}
+.head h1{font-size:21px;margin:0;letter-spacing:1px}.sub{font-size:9px;color:#d44;letter-spacing:2px;margin-top:3px}
 .card{margin-top:14px;padding:16px;border:1px solid #4a1111;border-radius:12px;background:#0a0606;box-shadow:0 0 18px #30000022}
-.status{display:flex;align-items:center;gap:9px}.status strong{flex:1;letter-spacing:1px}.statusDot{width:9px;height:9px;border-radius:50%;background:#e22;box-shadow:0 0 10px #e22}button{border:1px solid #c33;background:#350909;color:white;border-radius:8px;padding:10px 15px;font-weight:700}button.on{background:#a31313;box-shadow:0 0 18px #c22}
-label{display:flex;justify-content:space-between;color:#aaa;font-size:11px;letter-spacing:1px}output{color:#f55;font-weight:800}input{width:100%;accent-color:#e22;margin:16px 0 7px}.scale{display:flex;justify-content:space-between;color:#555;font-size:9px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.bars{height:45px;display:flex;align-items:end;gap:3px;margin-top:12px}.bars i{flex:1;height:5%;background:#d22;box-shadow:0 0 7px #d22;border-radius:2px}.msg{font-size:11px;color:#888;line-height:1.5}#error{color:#f66}footer{text-align:center;color:#555;font-size:9px;margin:18px}
+.status{display:flex;align-items:center;gap:9px}.status strong{flex:1;letter-spacing:1px}
+.statusDot{width:9px;height:9px;border-radius:50%;background:#e22;box-shadow:0 0 10px #e22}
+button{border:1px solid #c33;background:#350909;color:white;border-radius:8px;padding:10px 15px;font-weight:700;margin:4px}
+button.on{background:#a31313;box-shadow:0 0 18px #c22}
+label{display:flex;justify-content:space-between;color:#aaa;font-size:11px;letter-spacing:1px}
+output{color:#f55;font-weight:800}input{width:100%;accent-color:#e22;margin:16px 0 7px}
+.scale{display:flex;justify-content:space-between;color:#555;font-size:9px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.bars{height:45px;display:flex;align-items:end;gap:3px;margin-top:12px}
+.bars i{flex:1;height:5%;background:#d22;box-shadow:0 0 7px #d22;border-radius:2px}
+.msg{font-size:11px;color:#888;line-height:1.5}#error{color:#f66}#bridge{color:#6f6;font-weight:700}
 @keyframes p{to{transform:scale(1.15);opacity:.7}}@keyframes b{50%{opacity:.35}}
-</style></head><body><main>
-<div class="head"><div class="orb"></div><div><h1>NITESHH'S WEB HOOK</h1><div class="sub">ANDROID CHROME • WEB AUDIO</div></div></div>
+</style>
+</head>
+<body><main>
+<div class="head"><div class="orb"></div><div><h1>NITESHH'S WEB HOOK</h1><div class="sub">ANDROID CHROME • TWO-TAB EXPERIMENT</div></div></div>
+
 <div class="card status"><span id="sd" class="statusDot"></span><strong id="st">HOOK OFF</strong><button id="start">START MIC</button></div>
-<div class="card"><label>VOLUME GAIN <output id="go">1×</output></label><input id="gain" type="range" min="1" max="30000" value="1"><div class="scale"><span>1×</span><span>7,500×</span><span>15K×</span><span>22.5K×</span><span>30,000×</span></div></div>
-<div class="grid"><div class="card"><label>STEREO PAN <output id="po">CENTER</output></label><input id="pan" type="range" min="-1" max="1" step=".01" value="0"></div>
-<div class="card"><label>STEREO WIDTH <output id="wo">100%</output></label><input id="width" type="range" min="0" max="2" step=".01" value="1"></div></div>
+
+<div class="card">
+<label>VOLUME GAIN <output id="go">1×</output></label>
+<input id="gain" type="range" min="1" max="30000" value="1">
+<div class="scale"><span>1×</span><span>7,500×</span><span>15K×</span><span>22.5K×</span><span>30,000×</span></div>
+</div>
+
+<div class="grid">
+<div class="card"><label>STEREO PAN <output id="po">CENTER</output></label><input id="pan" type="range" min="-1" max="1" step=".01" value="0"></div>
+<div class="card"><label>STEREO WIDTH <output id="wo">100%</output></label><input id="width" type="range" min="0" max="2" step=".01" value="1"></div>
+</div>
+
 <div class="card"><label>MIC ACTIVITY <output id="mo">0%</output></label><div class="bars" id="bars"></div></div>
-<div class="card msg">Tap <b>START MIC</b> and allow microphone access. The page must be opened over HTTPS for microphone capture. <div id="error"></div></div>
-<footer>NITESHH'S WEB HOOK • Android Web Test Build</footer>
-</main><script>
-let ctx,src,gainNode,panner,analyser,stream,on=false;const $=x=>document.getElementById(x);
+
+<div class="card">
+<strong>Two-tab bridge</strong>
+<p class="msg">This experimental bridge sends the processed audio stream from this tab to another NITESHH'S WEB HOOK tab using WebRTC. It proves inter-tab audio routing, but it cannot create a new Android microphone device for Discord.</p>
+<button id="openReceiver">OPEN RECEIVER TAB</button>
+<button id="connect">CONNECT RECEIVER</button>
+<div id="bridge">Bridge: OFF</div>
+</div>
+
+<div class="card msg">
+<b>Discord test:</b> after the receiver is connected, keep both Web Hook tabs open and open Discord Web in another tab. Discord will still normally use Android's microphone device; the bridge does not replace that device.
+<div id="error"></div>
+</div>
+<footer style="text-align:center;color:#555;font-size:9px;margin:18px">NITESHH'S WEB HOOK • Android Two-Tab Experiment v0.2</footer>
+</main>
+
+<script>
+let ctx,src,gainNode,panner,analyser,stream,on=false;
+let pc=null, dc=null, isReceiver=location.hash==="#receiver";
+const bc=new BroadcastChannel("nwh-two-tab");
+const $=x=>document.getElementById(x);
 for(let i=0;i<28;i++){let e=document.createElement("i");$("bars").append(e)}
-async function start(){try{stream=await navigator.mediaDevices.getUserMedia({audio:true});ctx=new (window.AudioContext||window.webkitAudioContext)();await ctx.resume();src=ctx.createMediaStreamSource(stream);gainNode=ctx.createGain();panner=ctx.createStereoPanner();analyser=ctx.createAnalyser();analyser.fftSize=128;src.connect(gainNode).connect(panner).connect(analyser);on=true;$("st").textContent="HOOK ON";$("sd").style.background="#0f5";$("start").textContent="STOP MIC";$("start").classList.add("on");meter()}catch(e){$("error").textContent="Microphone error: "+e.name+" — "+e.message}}
-function meter(){if(!on)return;let a=new Uint8Array(analyser.frequencyBinCount);analyser.getByteFrequencyData(a);let avg=a.reduce((x,y)=>x+y,0)/a.length;$("mo").textContent=Math.round(avg/255*100)+"%";[...$("bars").children].forEach((e,i)=>e.style.height=(5+((a[i%a.length]||0)/255)*95)+"%");requestAnimationFrame(meter)}
-$("start").onclick=()=>{if(on){stream?.getTracks().forEach(t=>t.stop());ctx?.close();on=false;$("st").textContent="HOOK OFF";$("sd").style.background="#e22";$("start").textContent="START MIC";$("start").classList.remove("on")}else start()};
+if(isReceiver){
+  $("start").style.display="none";
+  $("openReceiver").style.display="none";
+  $("connect").style.display="none";
+  $("st").textContent="RECEIVER READY";
+  $("bridge").textContent="Bridge: waiting for sender…";
+}
+
+async function start(){
+  try{
+    stream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:false}});
+    ctx=new (window.AudioContext||window.webkitAudioContext)();
+    await ctx.resume();
+    src=ctx.createMediaStreamSource(stream);
+    gainNode=ctx.createGain();
+    panner=ctx.createStereoPanner();
+    analyser=ctx.createAnalyser();
+    analyser.fftSize=128;
+    src.connect(gainNode).connect(panner).connect(analyser);
+    on=true;
+    $("st").textContent="HOOK ON";
+    $("sd").style.background="#0f5";
+    $("start").textContent="STOP MIC";
+    $("start").classList.add("on");
+    meter();
+  }catch(e){$("error").textContent="Microphone error: "+e.name+" — "+e.message}
+}
+
+function meter(){
+  if(!on)return;
+  let a=new Uint8Array(analyser.frequencyBinCount);
+  analyser.getByteFrequencyData(a);
+  let avg=a.reduce((x,y)=>x+y,0)/a.length;
+  $("mo").textContent=Math.round(avg/255*100)+"%";
+  [...$("bars").children].forEach((e,i)=>e.style.height=(5+((a[i%a.length]||0)/255)*95)+"%");
+  requestAnimationFrame(meter);
+}
+
+$("start").onclick=()=>{if(on){
+  stream?.getTracks().forEach(t=>t.stop());ctx?.close();on=false;
+  $("st").textContent="HOOK OFF";$("sd").style.background="#e22";
+  $("start").textContent="START MIC";$("start").classList.remove("on");
+}else start()};
+
 $("gain").oninput=e=>{let v=+e.target.value;$("go").textContent=v.toLocaleString()+"×";if(gainNode)gainNode.gain.value=v};
 $("pan").oninput=e=>{let v=+e.target.value;$("po").textContent=Math.abs(v)<.02?"CENTER":v<0?"LEFT":"RIGHT";if(panner)panner.pan.value=v};
 $("width").oninput=e=>$("wo").textContent=Math.round(+e.target.value*100)+"%";
-</script></body></html>
+
+$("openReceiver").onclick=()=>{
+  window.open(location.origin+location.pathname+"#receiver","_blank");
+};
+
+function makePC(){
+  const p=new RTCPeerConnection();
+  p.onicecandidate=e=>{if(e.candidate)bc.postMessage({type:"ice",candidate:e.candidate})};
+  return p;
+}
+
+async function connectSender(){
+  if(!stream){$("error").textContent="Start MIC first.";return}
+  pc=makePC();
+  stream.getAudioTracks().forEach(t=>pc.addTrack(t,stream));
+  pc.onconnectionstatechange=()=>{$("bridge").textContent="Bridge: "+pc.connectionState};
+  const offer=await pc.createOffer();
+  await pc.setLocalDescription(offer);
+  bc.postMessage({type:"offer",sdp:pc.localDescription});
+  $("bridge").textContent="Bridge: offer sent — waiting for receiver";
+}
+
+$("connect").onclick=connectSender;
+
+bc.onmessage=async e=>{
+  const m=e.data;
+  if(isReceiver && m.type==="offer"){
+    pc=makePC();
+    pc.ontrack=ev=>{
+      const audio=document.getElementById("remote")||Object.assign(document.createElement("audio"),{id:"remote",autoplay:true,controls:true});
+      if(!audio.parentNode)document.body.appendChild(audio);
+      audio.srcObject=ev.streams[0];
+      $("bridge").textContent="Bridge: CONNECTED — processed stream received";
+      $("st").textContent="RECEIVER CONNECTED";
+      $("sd").style.background="#0f5";
+    };
+    pc.onconnectionstatechange=()=>{$("bridge").textContent="Bridge: "+pc.connectionState};
+    await pc.setRemoteDescription(m.sdp);
+    const ans=await pc.createAnswer();
+    await pc.setLocalDescription(ans);
+    bc.postMessage({type:"answer",sdp:pc.localDescription});
+  }else if(!isReceiver && m.type==="answer" && pc){
+    await pc.setRemoteDescription(m.sdp);
+  }else if(m.type==="ice" && pc){
+    try{await pc.addIceCandidate(m.candidate)}catch(_){}
+  }
+};
+</script>
+</body></html>
